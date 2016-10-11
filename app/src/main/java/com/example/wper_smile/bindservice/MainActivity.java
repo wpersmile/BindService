@@ -16,13 +16,14 @@ public class MainActivity extends AppCompatActivity {
 
         Button staBtn=(Button)findViewById(R.id.staBtn);
         Button stopBtn=(Button)findViewById(R.id.stopBtn);
+
         staBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(MainActivity.this,MyService.class);
                 intent.putExtra("num",10);
                 startService(intent);
-                //Toast.makeText(MainActivity.this, "Service启动成功", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Service启动成功", Toast.LENGTH_SHORT).show();
             }
         });
         stopBtn.setOnClickListener(new View.OnClickListener() {
